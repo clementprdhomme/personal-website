@@ -25,11 +25,11 @@ gulp.task('serve', function() {
 gulp.task('css', function () {
   var processors = [
     autoprefixer({ browsers: '> 5%' }),
-    postcssHexRbga,
     postcssImport,
+    postcssSimpleVars,
     postcssMediaMinmax,
     postcssNested,
-    postcssSimpleVars
+    postcssHexRbga
   ];
 
     return gulp.src('src/styles/**/*.css')
