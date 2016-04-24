@@ -67,10 +67,15 @@ gulp.task('favicons', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('resumes', function() {
+  return gulp.src('src/resumes/**/*')
+    .pipe(gulp.dest('dist/download'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.css', [ 'css' ]);
     gulp.watch('src/**/*.html', [ 'html' ]);
     gulp.watch('src/lang/*.json', [ 'html' ]);
 });
 
-gulp.task('default', [ 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'watch' ]);
+gulp.task('default', [ 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'resumes', 'watch' ]);
