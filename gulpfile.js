@@ -59,33 +59,18 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('robots', function() {
-  return gulp.src('src/robots.txt')
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('favicons', function() {
-  return gulp.src('src/favicons/**/*')
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('resumes', function() {
-  return gulp.src('src/resumes/**/*')
+gulp.task('download', function() {
+  return gulp.src([ 'src/resumes/**/*' ])
     .pipe(gulp.dest('dist/download'));
-});
-
-gulp.task('htaccess', function() {
-  return gulp.src('/src/.htaccess')
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('index', function() {
-  return gulp.src('/src/index.php')
-    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', function() {
   return del('dist/**/*');
+});
+
+gulp.task('assets', function() {
+  return gulp.src([ 'src/index.php', 'src/.htaccess', 'src/robots.txt', 'src/favicons/**/*' ])
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
@@ -94,4 +79,4 @@ gulp.task('watch', function () {
     gulp.watch('src/lang/*.json', [ 'html' ]);
 });
 
-gulp.task('default', [ 'clean', 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'resumes', 'htaccess', 'index', 'watch' ]);
+gulp.task('default', [ 'clean', 'assets', 'fonts', 'css', 'html', 'download',  'serve', 'watch' ]);
