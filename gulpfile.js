@@ -16,6 +16,8 @@ var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
 var htmlI18n = require('gulp-html-i18n');
 
+var del = require('del');
+
 gulp.task('serve', function() {
   browserSync({
     server: {
@@ -72,10 +74,14 @@ gulp.task('resumes', function() {
     .pipe(gulp.dest('dist/download'));
 });
 
+gulp.task('clean', function() {
+  return del('dist/**/*');
+});
+
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.css', [ 'css' ]);
     gulp.watch('src/**/*.html', [ 'html' ]);
     gulp.watch('src/lang/*.json', [ 'html' ]);
 });
 
-gulp.task('default', [ 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'resumes', 'watch' ]);
+gulp.task('default', [ 'clean', 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'resumes', 'watch' ]);
