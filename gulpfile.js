@@ -46,9 +46,14 @@ gulp.task('html', function() {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.css', [ 'css' ]);
     gulp.watch('src/**/*.html', [ 'html' ]);
 });
 
-gulp.task('default', [ 'serve', 'css', 'html', 'watch' ]);
+gulp.task('default', [ 'serve', 'fonts', 'css', 'html', 'watch' ]);
