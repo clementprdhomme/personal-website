@@ -14,6 +14,7 @@ var postcssExtend = require('postcss-extend');
 var cssmin = require('gulp-cssmin');
 
 var htmlmin = require('gulp-htmlmin');
+var htmlI18n = require('gulp-html-i18n');
 
 gulp.task('serve', function() {
   browserSync({
@@ -44,6 +45,9 @@ gulp.task('css', function () {
 gulp.task('html', function() {
   return gulp.src('src/**/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlI18n({
+      langDir: 'src/lang'
+    }))
     .pipe(gulp.dest('dist'))
     .pipe(reload({ stream: true }));
 });
@@ -66,6 +70,7 @@ gulp.task('favicons', function() {
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.css', [ 'css' ]);
     gulp.watch('src/**/*.html', [ 'html' ]);
+    gulp.watch('src/lang/*.json', [ 'html' ]);
 });
 
 gulp.task('default', [ 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'watch' ]);
