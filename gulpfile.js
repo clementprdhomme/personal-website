@@ -74,6 +74,16 @@ gulp.task('resumes', function() {
     .pipe(gulp.dest('dist/download'));
 });
 
+gulp.task('htaccess', function() {
+  return gulp.src('/src/.htaccess')
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('index', function() {
+  return gulp.src('/src/index.php')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('clean', function() {
   return del('dist/**/*');
 });
@@ -84,4 +94,4 @@ gulp.task('watch', function () {
     gulp.watch('src/lang/*.json', [ 'html' ]);
 });
 
-gulp.task('default', [ 'clean', 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'resumes', 'watch' ]);
+gulp.task('default', [ 'clean', 'serve', 'fonts', 'css', 'html', 'robots', 'favicons', 'resumes', 'htaccess', 'index', 'watch' ]);
