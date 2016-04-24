@@ -37,7 +37,7 @@ gulp.task('css', function () {
     postcssMediaMinmax
   ];
 
-    return gulp.src('src/styles/**/*.css')
+    return gulp.src('src/styles/main.css')
         .pipe(postcss(processors))
         .pipe(cssmin())
         .pipe(gulp.dest('dist/'))
