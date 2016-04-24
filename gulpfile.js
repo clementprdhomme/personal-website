@@ -10,7 +10,7 @@ var postcssImport = require('postcss-import');
 var postcssMediaMinmax = require('postcss-media-minmax');
 var postcssNested = require('postcss-nested');
 var postcssSimpleVars = require('postcss-simple-vars');
-var postcssSimpleExtend = require('postcss-simple-extend');
+var postcssExtend = require('postcss-extend');
 var cssmin = require('gulp-cssmin');
 
 var htmlmin = require('gulp-htmlmin');
@@ -28,10 +28,10 @@ gulp.task('css', function () {
     autoprefixer({ browsers: '> 5%' }),
     postcssImport,
     postcssSimpleVars,
-    postcssMediaMinmax,
-    postcssNested,
     postcssHexRbga,
-    postcssSimpleExtend
+    postcssExtend,
+    postcssNested,
+    postcssMediaMinmax
   ];
 
     return gulp.src('src/styles/**/*.css')
