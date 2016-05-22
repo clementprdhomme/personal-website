@@ -1,0 +1,31 @@
+@import "../settings.css";
+
+.language-nav {
+
+  > .language-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    > .item {
+      display: inline-block;
+      margin-right: .5ch;
+
+      > a {
+        color: rgba($color-1, .5);
+        &:before { background-color: $color-1; }
+        &:hover { color: $color-1; }
+      }
+
+      &:after {
+        content: "-";
+        display: inline-block;
+        padding-left: .5ch;
+        color: rgba($color-1, .5);
+      }
+
+      &:last-of-type:after { content: none; }
+    }
+  }
+
+}

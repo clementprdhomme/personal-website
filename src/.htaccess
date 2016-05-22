@@ -1,0 +1,63 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteOptions Inherit
+RewriteBase /
+
+##
+#  SPANISH
+##
+
+# [ES] index.html -> [R] /es
+# [ES] index.php  -> [R] /es
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+RewriteRule ^(index\.(html|php))?$ /es [R=301,L]
+
+# es            -> index-es.html
+# es/           -> index-es.html
+# es/index.html -> index-es.html
+# es/index.php  -> index-es.html
+RewriteRule ^es(/|/index\.(html|php))?$ index-es.html [L]
+
+##
+#  FRENCH
+##
+
+# [FR] index.html -> [R] /fr
+# [FR] index.php  -> [R] /fr
+RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+RewriteRule ^(index\.(html|php))$ /fr [R=301,L]
+
+# fr            -> index-fr.html
+# fr/           -> index-fr.html
+# fr/index.html -> index-fr.html
+# fr/index.php  -> index-fr.html
+RewriteRule ^fr(/|/index\.(html|php))?$ index-fr.html [L]
+
+##
+#  ENGLISH (FALLBACK)
+##
+
+# index.html -> [R] /en
+# index.php  -> [R] /en
+RewriteRule ^(index\.(html|php))?$ /en [R=301,L]
+
+# en            -> index-en.html
+# en/           -> index-en.html
+# en/index.html -> index-en.html
+# en/index.php  -> index-en.html
+RewriteRule ^en(/|/index\.(html|php))?$ index-en.html [L]
+
+##
+#  ASSETS
+##
+
+# en/... -> ...
+# es/... -> ...
+# fr/... -> ...
+RewriteRule ^(en|es|fr)/(.*)$ /$2 [L]
+
+##
+#  404
+##
+
+ErrorDocument 404 /

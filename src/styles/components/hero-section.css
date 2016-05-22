@@ -1,0 +1,44 @@
+@import '../settings.css';
+
+.hero-section {
+
+  @media screen and (width >= $breakpoint-m) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  > .hi-image {
+    width: 95px;
+    height: 96px;
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (width >= $breakpoint-m) {
+      margin: 0;
+      width: 184px;
+      height: 185px;
+      flex: 1 0 184px;
+    }
+  }
+
+  > .intro {
+    margin-top: 30px;
+
+    @media screen and (width >= $breakpoint-m) {
+      margin-top: 0;
+      margin-left: 40px;
+      flex-shrink: 1;
+    }
+
+    @media screen and (width >= $breakpoint-xl) {
+      margin-left: 50px;
+    }
+
+    > p {
+      margin: 0 0 18px 0;
+      &:last-of-type { margin: 0; }
+    }
+  }
+
+}

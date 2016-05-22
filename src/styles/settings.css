@@ -1,0 +1,10 @@
+$color-1: #A7A7A7;
+$color-2: #8AEDC5;
+$color-3: #77BAF2;
+$color-4: #B0AFF9;
+$color-5: #A8D4F8;
+
+$breakpoint-s:   425px;
+$breakpoint-m:   650px;
+$breakpoint-l:   840px;
+$breakpoint-xl: 1040px;
