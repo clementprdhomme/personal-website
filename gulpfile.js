@@ -69,7 +69,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('assets', function() {
-  return gulp.src([ 'src/index.php', 'src/.htaccess', 'src/robots.txt', 'src/favicons/**/*' ])
+  return gulp.src([ 'src/.htaccess', 'src/robots.txt', 'src/favicons/**/*' ])
     .pipe(gulp.dest('dist'));
 });
 
