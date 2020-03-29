@@ -1,101 +1,78 @@
-<!DOCTYPE html>
-<html lang="${{ _lang_ }}$">
-  <head>
-    <title>${{ index.title }}$</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="${{ index.description }}$">
-    <meta name="keywords" content="${{ index.keywords }}$">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00d881">
-    <meta name="msapplication-TileColor" content="#8aedc5">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="theme-color" content="#8aedc5">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@clementprdhomme">
-    <meta property="og:url" content="http://clementprodhomme.fr">
-    <meta property="og:title" content="${{ index.title }}$">
-    <meta property="og:description" content="${{ index.description }}$">
-    <meta property="og:image" content="http://clementprodhomme.fr/apple-touch-icon-180x180.png">
-  </head>
-  <body>
-    <section class="l-hero">
-      <nav class="language-nav">
-        <ul class="language-list">
-          <li class="item"><a href="/${{ index.other-lang-1 }}$" hreflang="${{ index.other-lang-1 }}$">${{ index.other-lang-1-name }}$</a></li>
-          <li class="item"><a href="/${{ index.other-lang-2 }}$" hreflang="${{ index.other-lang-2 }}$">${{ index.other-lang-2-name }}$</a></li>
-        </ul>
-      </nav>
-      <div class="hero-section">
-        <svg class="hi-image" viewBox="0 0 95 96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" title="Hi"><title>Hi</title><defs><path d="M18.6 37.469V0H0v94h18.6V56.86h22.842V94h18.6V0h-18.6v37.469H18.6zm55.8-6.903H93V94H74.4V30.566zM74.4 0H93v19.72H74.4V0z" id="a"/></defs><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><use stroke="#8AEDC5" xlink:href="#a"/><use xlink:href="#a"/></g></svg>
-        <div class="intro">
-          ${{ index.intro }}$
-        </div>
-      </div>
-    </section>
-    <section class="l-content">
-      <div class="recentprojects">
-        <h1 class="general-title">${{ index.recent-projects }}$</h1>
-        <ul class="general-list">
-          <li class="item">
-            <h2 class="general-title -small"><a href="${{ index.project-1-url }}$" rel="noreferrer">${{ index.project-1-name }}$</a> <span class="inline-hashtag">#${{ index.personal }}$</span></h2>
-            ${{ index.project-1-description }}$
-          </li>
-          <li class="item -secondary">
-            <h2 class="general-title -small"><a href="${{ index.project-2-url }}$" rel="noreferrer">${{ index.project-2-name }}$</a> <span class="inline-hashtag -secondary">#${{ index.work }}$</span></h2>
-            ${{ index.project-2-description }}$
-          </li>
-          <li class="item -secondary">
-            <h2 class="general-title -small"><a href="${{ index.project-3-url }}$" rel="noreferrer">${{ index.project-3-name }}$</a> <span class="inline-hashtag -secondary">#${{ index.work }}$</span></h2>
-            ${{ index.project-3-description }}$
-          </li>
-        </ul>
-      </div>
-      <a href="download/CV_${{ _lang_ }}$.pdf" class="resume">
-        <div class="title">${{ index.resume }}$</div>
-        <span class="link">${{ index.open }}$</span>
-      </a>
-    </section>
-    <footer class="l-footer">
-      <nav class="contact-links">
-        <ul class="link-list">
-          <li class="item"><a href="https://twitter.com/ClementPrdhomme" rel="noreferrer">twitter</a></li>
-          <li class="item"><a href="https://github.com/clementprdhomme" rel="noreferrer">github</a></li>
-          <li class="item"><a href="https://www.linkedin.com/in/clément-prod-homme-158a815b" rel="noreferrer">linked in</a></li>
-        </ul>
-      </nav>
-    </footer>
+---
+layout: base.html
+---
 
-    <!-- Piwik -->
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(["setDomains", ["*.clementprodhomme.fr"]]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//analytics.clementprodhomme.fr/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 1]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <noscript><p><img src="//analytics.clementprodhomme.fr/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
-  </body>
-</html>
+<div class="l-homepage">
+  <section class="row">
+    <div class="content">
+      <p>
+        I’m Clément Prod'homme, a {{collections.experience[0].position}} working at
+        <a class="-primary" href="{{collections.experience[0].url}}" rel="noopener">
+          {{collections.experience[0].company}}</a
+        >. I build interactive web applications mainly focused on data visualisations and maps.
+      </p>
+      <p>
+        Through experience, I've learnt that quality code revolves around maintainability, which can
+        be achieved by breaking down problems, and writing legible and minimal solutions.
+      </p>
+      <p>
+        I’m a fast learner and I'm always eager to increase my knowledge. It keeps me motivated.
+      </p>
+      <p>
+        If you feel like getting to know me, write me an email at
+        <a class="-secondary" href="mailto:contact@clementprodhomme.fr">
+          contact@clementprodhomme.fr</a
+        >.
+      </p>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Recent projects</h2>
+    <div class="content">
+      {%- for project in collections.projects -%}
+      <div class="c-project">
+        <h3>
+          <a class="-primary" href="{{project.url}}" rel="noopener">{{project.name}}</a>
+        </h3>
+        <p>{{project.intro}}</p>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Experience</h2>
+    <div class="content">
+      {%- for experience in collections.experience -%}
+      <div class="c-experience">
+        <h3>
+          <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
+        </h3>
+        <span>{{experience.duration}}</span>
+        <p class="position">{{experience.position}}</p>
+        <p>{{experience.intro}}</p>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <section class="row">
+    <h2>Online</h2>
+    <div class="content">
+      <div class="social-medias">
+        <a class="-primary" href="https://twitter.com/ClementPrdhomme" rel="noopener">twitter</a>
+        <br />
+        <a class="-primary" href="https://github.com/clementprdhomme" rel="noopener">github</a>
+        <br />
+        <a
+          class="-primary"
+          href="https://www.linkedin.com/in/clément-prod-homme-158a815b"
+          rel="noopener"
+        >
+          linked in
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

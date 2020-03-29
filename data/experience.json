@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "company": "Involution Studios",
+      "position": "Front end intern",
+      "url": "http://www.goinvo.com",
+      "start_date": "2014-06-30T00:00:00+00:00",
+      "end_date": "2014-09-19T00:00:00+00:00",
+      "intro": "Built a dynamic visualisation for Invo's blog and a prototype to compare Massachusetts' hospitals"
+    },
+    {
+      "id": 1,
+      "company": "Vizzuality",
+      "position": "Senior front end engineer",
+      "url": "http://www.vizzuality.com/",
+      "start_date": "2015-02-16T00:00:00+00:00",
+      "end_date": null,
+      "intro": "Assuming a lead role on medium to large size projects, with a focus on quality"
+    }
+  ]
+}

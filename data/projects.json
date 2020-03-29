@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "name": "Stuart Challenge",
+      "slug": "stuart-challenge",
+      "intro": "A 4-hour challenge to build a responsive, fast and 60 FPS homepage for Stuart",
+      "url": "https://github.com/clementprdhomme/stuart-challenge"
+    },
+    {
+      "id": 1,
+      "name": "Surface Water",
+      "slug": "surface-water",
+      "intro": "Prototype for the Earth Genome showing the evolution of the water at the surface of the earth",
+      "url": "https://github.com/Vizzuality/surface-water"
+    },
+    {
+      "id": 2,
+      "name": "Jiminy",
+      "slug": "jiminy",
+      "intro": "Author of this chart inference library that powers the recommendations of the Resource Watch API, among others",
+      "url": "https://github.com/Vizzuality/jiminy"
+    },
+    {
+      "id": 3,
+      "name": "Mozilla's Internet Health Report",
+      "slug": "internet-health-report",
+      "intro": "Interactive visualisations with dynamically computed layouts and support for several languages",
+      "url": "http://github.com/Vizzuality/internet-health-report"
+    },
+    {
+      "id": 4,
+      "name": "Widget Editor",
+      "slug": "widget-editor",
+      "intro": "Component allowing users to create custom visualisations and maps using Resource Watch’s API",
+      "url": "https://github.com/resource-watch/widget-editor"
+    },
+    {
+      "id": 5,
+      "name": "Wildlife Insights",
+      "slug": "wildlife-insights",
+      "intro": "AI powered platform to monitor and analyse wildlife populations based on camera traps",
+      "url": "https://app.wildlifeinsights.org/explore"
+    }
+  ]
+}

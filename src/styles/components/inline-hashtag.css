@@ -1,6 +1,0 @@
-@import "../settings.css";
-
-.inline-hashtag {
-  color: $color-5;
-  &.-secondary { color: $color-4; }
-}
