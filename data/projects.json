@@ -41,6 +41,13 @@
       "slug": "wildlife-insights",
       "intro": "AI powered platform to monitor and analyse wildlife populations based on camera traps",
       "url": "https://app.wildlifeinsights.org/explore"
+    },
+    {
+      "id": 6,
+      "name": "Mongabay's satellite tool",
+      "slug": "mongabay-satellite-tool",
+      "intro": "In-browser tool that generates map images for Mongabay's articles",
+      "url": "https://github.com/mongabay/satellite-stamp"
     }
   ]
 }
