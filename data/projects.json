@@ -48,6 +48,13 @@
       "slug": "mongabay-satellite-tool",
       "intro": "In-browser tool that generates map images for Mongabay's articles",
       "url": "https://github.com/mongabay/satellite-stamp"
+    },
+    {
+      "id": 7,
+      "name": "Soils Revealed",
+      "slug": "soils-revealed",
+      "intro": "Platform for direct visualization, analysis and reporting of soil organic carbon predictions and changes over time",
+      "url": "https://github.com/Vizzuality/soils-revealed"
     }
   ]
 }
