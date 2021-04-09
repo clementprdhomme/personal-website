@@ -55,6 +55,13 @@
       "slug": "soils-revealed",
       "intro": "Platform for direct visualization, analysis and reporting of soil organic carbon predictions and changes over time",
       "url": "https://github.com/Vizzuality/soils-revealed"
+    },
+    {
+      "id": 8,
+      "name": "A call for sustainability on the web",
+      "slug": "call-for-sustainability-web",
+      "intro": "Article raising awareness on page speed, carbon footprint and accessibility to build a fairer web for all",
+      "url": "https://medium.com/vizzuality-blog/a-call-for-sustainability-on-the-web-ef6f6d852020"
     }
   ]
 }
