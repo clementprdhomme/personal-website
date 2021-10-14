@@ -62,6 +62,13 @@
       "slug": "call-for-sustainability-web",
       "intro": "Article raising awareness on page speed, carbon footprint and accessibility to build a fairer web for all",
       "url": "https://medium.com/vizzuality-blog/a-call-for-sustainability-on-the-web-ef6f6d852020"
+    },
+    {
+      "id": 9,
+      "name": "Restor",
+      "slug": "restor",
+      "intro": "Open data platform of ecological insights for the global restoration movement",
+      "url": "https://restor.eco/"
     }
   ]
 }
