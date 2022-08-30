@@ -69,6 +69,13 @@
       "slug": "restor",
       "intro": "Open data platform of ecological insights for the global restoration movement",
       "url": "https://restor.eco/"
+    },
+    {
+      "id": 10,
+      "name": "Reforestation.app",
+      "slug": "reforestation-app",
+      "intro": "Catalogue of reforestation projects ranked by transparency",
+      "url": "https://reforestation.app/"
     }
   ]
 }
