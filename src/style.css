@@ -275,6 +275,10 @@ a.-secondary:hover {
 }
 
 .c-experience p.position {
-  margin-bottom: 5px;
+  margin-top: 5px;
   color: var(--body-primary-color);
+}
+
+.c-experience p:first-of-type + p.position {
+  margin-top: 15px;
 }

@@ -6,10 +6,15 @@ layout: base.html
   <section class="row">
     <div class="content">
       <p>
-        I’m Clément Prod'homme, a {{collections.experience[0].position}} working at
+        I’m Clément Prod'homme, a {{collections.experience[0].positions[0].title}} working at
         <a class="-primary" href="{{collections.experience[0].url}}" rel="noopener">
           {{collections.experience[0].company}}</a
-        >. I build interactive web applications mainly focused on data visualisations and maps.
+        >.
+      </p>
+      <p>
+        I lead the development of interactive web applications focused on environmental issues
+        such as climate change and biodiversity loss. Most of them involve data visualisations and
+        maps.
       </p>
       <p>
         Through experience, I've learnt that quality code revolves around maintainability, which can
@@ -50,8 +55,13 @@ layout: base.html
           <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
         </h3>
         <span>{{experience.duration}}</span>
-        <p class="position">{{experience.position}}</p>
         <p>{{experience.intro}}</p>
+        {%- for position in experience.positions -%}
+          <p class="position">
+            <span>{{position.formatted_start_date}}</span>
+            {{position.title}}
+          </p>
+        {%- endfor -%}
       </div>
       {%- endfor -%}
     </div>

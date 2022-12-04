@@ -11,14 +11,30 @@ module.exports = (eleventyConfig) => {
       ...experienceData.data.map((experience) => {
         let duration;
 
-        if (experience.start_date && experience.end_date) {
-          duration = formatDistance(new Date(experience.end_date), new Date(experience.start_date));
-          duration = `${duration} (from ${format(new Date(experience.start_date), 'MMM yyyy')})`;
-        } else if (experience.start_date) {
-          duration = `since ${format(new Date(experience.start_date), 'MMM yyyy')}`;
+        const startDate = experience.positions.length > 0
+          ? experience.positions[0].start_date
+          : null;
+
+        const endDate = experience.positions.length > 0
+          ? experience.positions[experience.positions.length - 1].end_date
+          : null;
+
+        if (startDate && endDate) {
+          duration = formatDistance(new Date(endDate), new Date(startDate));
+          duration = `${duration} (from ${format(new Date(startDate), 'MMM yyyy')})`;
+        } else if (startDate) {
+          duration = `since ${format(new Date(startDate), 'MMM yyyy')}`;
         }
 
-        return { ...experience, duration };
+        const positions = [...experience.positions].reverse().map((position) => ({
+          ...position,
+          formatted_start_date: format(new Date(position.start_date), 'yyyy-MM'),
+          formatted_end_date: position.end_date
+            ? format(new Date(position.end_date), 'yyyy-MM')
+            : null,
+        }));
+
+        return { ...experience, positions, duration };
       }),
     ].reverse()
   );
