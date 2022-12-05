@@ -6,15 +6,13 @@ layout: base.html
   <section class="row">
     <div class="content">
       <p>
-        I’m Clément Prod'homme, a {{collections.experience[0].positions[0].title}} working at
-        <a class="-primary" href="{{collections.experience[0].url}}" rel="noopener">
-          {{collections.experience[0].company}}</a
+        I’m Clément Prod'homme, a {{collections.experience[1].positions[0].title}} working at
+        <a class="-primary" href="{{collections.experience[1].url}}" rel="noopener">
+          {{collections.experience[1].company}}</a
         >.
       </p>
       <p>
-        I lead the development of interactive web applications focused on environmental issues
-        such as climate change and biodiversity loss. Most of them involve data visualisations and
-        maps.
+        {{collections.experience[1].long_intro}}
       </p>
       <p>
         Through experience, I've learnt that quality code revolves around maintainability, which can
@@ -50,19 +48,21 @@ layout: base.html
     <h2>Experience</h2>
     <div class="content">
       {%- for experience in collections.experience -%}
-      <div class="c-experience">
-        <h3>
-          <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
-        </h3>
-        <span>{{experience.duration}}</span>
-        <p>{{experience.intro}}</p>
-        {%- for position in experience.positions -%}
-          <p class="position">
-            <span>{{position.formatted_start_date}}</span>
-            {{position.title}}
-          </p>
-        {%- endfor -%}
-      </div>
+        {% if experience.side_activity != true %}
+          <div class="c-experience">
+            <h3>
+              <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
+            </h3>
+            <span>{{experience.duration}}</span>
+            <p>{{experience.intro}}</p>
+            {%- for position in experience.positions -%}
+              <p class="position">
+                <span>{{position.formatted_start_date}}</span>
+                {{position.title}}
+              </p>
+            {%- endfor -%}
+          </div>
+        {% endif %}
       {%- endfor -%}
     </div>
   </section>

@@ -1,0 +1,108 @@
+---
+layout: cv.html
+---
+
+<div class="l-cv">
+  <h1>Clément Prod'homme, {{collections.experience[1].positions[0].title}}</h1>
+
+  <p>
+    <a href="https://clementprodhomme.fr" rel="noopener">
+      clementprodhomme.fr
+    </a>
+    <br />
+    Stockholm, Sweden
+  </p>
+
+  <h2>About me</h2>
+
+  <div class="about">
+    <p>
+      I'm passionate about the environment, sustainability and especially climate change.
+    </p>
+    <p>
+      I've made it my purpose to do everything I can to mitigate the consequences of the
+      environmental crisis by working exclusively for companies whose purpose it is to fix the
+      planet.
+    </p>
+    <p>
+      At work, I've lead the development of diverse web applications that can be used by
+      decision-makers as the basis for evidence-based action. On my free time, I've regularly
+      participated in climate strikes and joined other activist groups in Stockholm.
+    </p>
+    <p>
+      I'm an avid learner that is motivated by positive change. I'm looking for opportunities that
+      make a difference and companies that value care and empathy, and that start changing the world
+      from within.
+    </p>
+  </div>
+
+  <h2>Work experience</h2>
+
+  {%- for experience in collections.experience -%}
+    {% if experience.side_activity != true %}
+      <div class="c-experience">
+        <h3>
+          <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
+        </h3>
+        <span>{{experience.duration}}</span>
+        <p>{{experience.long_intro}}</p>
+        {%- for position in experience.positions -%}
+          <p class="position">
+            <span>{{position.formatted_start_date}}</span>
+            {{position.title}}
+          </p>
+        {%- endfor -%}
+      </div>
+    {% endif %}
+  {%- endfor -%}
+
+  <h2>Education</h2>
+
+  {%- for education in collections.education -%}
+    <div class="c-experience">
+      <h3>
+        <a class="-primary" href="{{education.url}}" rel="noopener">{{education.school}}</a>
+      </h3>
+      <span>{{education.duration}} · {{education.location}}</span>
+      <p>{{education.intro}}</p>
+      {% if education.degree %}
+        <p class="position">
+          {{education.degree}}
+        </p>
+      {% endif %}
+    </div>
+  {%- endfor -%}
+
+  <h2>Other activities</h2>
+
+  {%- for experience in collections.experience -%}
+    {% if experience.side_activity == true %}
+      <div class="c-experience">
+        <h3>
+          <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
+        </h3>
+        <span>{{experience.duration}}</span>
+        <p>{{experience.long_intro}}</p>
+        {%- for position in experience.positions -%}
+          <p class="position">
+            <span>{{position.formatted_start_date}}</span>
+            {{position.title}}
+          </p>
+        {%- endfor -%}
+      </div>
+    {% endif %}
+  {%- endfor -%}
+
+  <h2>Language skills</h2>
+
+  <dl>
+    <dt>French</dt>
+    <dd>Native speaker</dd>
+    <dt>English</dt>
+    <dd>Full professional proficiency (C2)</dd>
+    <dt>Spanish</dt>
+    <dd>Full professional proficiency (C2)</dd>
+    <dt>Swedish</dt>
+    <dd>Limited proficiency (A2)</dd>
+  </dl>
+</div>

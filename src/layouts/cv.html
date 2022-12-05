@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>Clément Prod'homme</title>
+  <title>Clément Prod'homme | CV</title>
   <meta
     name="description"
     content="The personal website of front end engineer Clément Prod'homme"
@@ -12,16 +12,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link as="font" href="/assets/Anaheim-Regular.ttf" rel="preload" />
   <link rel="stylesheet" type="text/css" href="/style.css" />
-  <body>
+  <body class="-print">
     <div>
       <div class="app">
-        <header class="c-app-header" role="banner">
-          <h1>Clément Prod'homme</h1>
-          <p>Front end engineer</p>
-          <p>
-            <a class="-secondary" href="/cv">Download CV</a>
-          </p>
-        </header>
+        <p class="print-note">
+          This page is formatted so that it can be easily printed or exported as a PDF. If exporting,
+          make sure to toggle on the setting to include the backgrounds.
         <main role="main">
           {{content}}
         </main>

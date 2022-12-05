@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "school": "Ensimag",
+      "location": "Grenoble, France",
+      "degree": "Master of Science (M.Sc.) in Software Engineering",
+      "subject": "Software engineering",
+      "start_date": "2012-09-01T00:00:00+00:00",
+      "end_date": "2015-09-01T00:00:00+00:00",
+      "url": "https://ensimag.grenoble-inp.fr/en",
+      "intro": "Ensimag (Grenoble Institude of Technology) is a French Grande École which covers Computer Science and applied mathematics. There I specialised in Information Systems Engineering."
+    },
+    {
+      "id": 0,
+      "school": "Facultad de Informática",
+      "location": "Madrid, Spain",
+      "degree": null,
+      "subject": null,
+      "start_date": "2014-02-01T00:00:00+00:00",
+      "end_date": "2014-06-30T00:00:00+00:00",
+      "url": "http://fi.upm.es/",
+      "intro": "I studied at Facultad de Informática (Polytechnic University of Madrid) as part of an Erasmus university exchange."
+    }
+  ]
+}

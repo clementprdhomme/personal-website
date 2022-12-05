@@ -2,6 +2,21 @@
   "data": [
     {
       "id": 0,
+      "company": "INPulse",
+      "side_activity": true,
+      "positions": [
+        {
+          "title": "President",
+          "start_date": "2013-04-01T00:00:00+00:00",
+          "end_date": "2014-02-01T00:00:00+00:00"
+        }
+      ],
+      "url": "https://www.facebook.com/INPulsePage",
+      "intro": "Promote diversity and fight homophobia as the president of my university's LGBT+ student association",
+      "long_intro": "INPulse is the LGBT+ student association of the Grenoble Institute of Technology. As president, my aim was to help new LGBT+ students meet and find their way no matter who they are. Together with my team, we've promoted diversity and published posters against homophobia."
+    },
+    {
+      "id": 1,
       "company": "Involution Studios",
       "positions": [
         {
@@ -11,10 +26,11 @@
         }
       ],
       "url": "http://www.goinvo.com",
-      "intro": "Built a dynamic visualisation for Invo's blog and a prototype to compare Massachusetts' hospitals"
+      "intro": "Built a dynamic visualisation for Invo's blog and a prototype to compare Massachusetts' hospitals",
+      "long_intro": "During this internship, I worked on rewriting the algorithms and design of a data visualisation, as well as created the prototype of a web application to visualise and compare care among hospitals in Massachusetts."
     },
     {
-      "id": 1,
+      "id": 2,
       "company": "Vizzuality",
       "positions": [
         {
@@ -31,10 +47,31 @@
           "title": "Senior front-end engineer",
           "start_date": "2019-02-01T00:00:00+00:00",
           "end_date":  null
+        },
+        {
+          "title": "Technical lead",
+          "start_date": "2022-01-14T00:00:00+00:00",
+          "end_date":  null
         }
       ],
       "url": "http://www.vizzuality.com/",
-      "intro": "Lead medium to large size projects with a focus on quality"
+      "intro": "Lead medium to large size projects with a focus on quality",
+      "long_intro": "I lead the development of interactive React.js web applications focused on environmental issues such as climate change and biodiversity loss. Most of them involve data visualisations and maps. I'm also the co-founder of the internal sustainability group which organises regular talks and activities during the yearly company retreat."
+    },
+    {
+      "id": 3,
+      "company": "Cykelaktion Stockholm",
+      "side_activity": true,
+      "positions": [
+        {
+          "title": "Volunteer",
+          "start_date": "2022-08-26T00:00:00+00:00",
+          "end_date": null
+        }
+      ],
+      "url": "https://www.facebook.com/CykelaktionSthlm/",
+      "intro": "Help with safety during critical mass cycling events",
+      "long_intro": "Cykelaktion Stockholm is an activist group that runs monthly critical mass cycling events and contributes to the yearly Cykelkarnevalen (cycling carnival). As a volunteer, I've helped make signs and other flags, as well as ensure safety during the critical mass cycling events."
     }
   ]
 }

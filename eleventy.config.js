@@ -4,6 +4,7 @@ const formatDistance = require('date-fns/formatDistance');
 
 const experienceData = require('./data/experience.json');
 const projectsData = require('./data/projects.json');
+const educationData = require('./data/education.json');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addCollection('experience', () =>
@@ -34,15 +35,36 @@ module.exports = (eleventyConfig) => {
             : null,
         }));
 
-        return { ...experience, positions, duration };
+        return { ...experience, positions, duration, start_date: startDate, end_date: endDate };
       }),
     ].reverse()
   );
 
   eleventyConfig.addCollection('projects', () => [...projectsData.data].reverse().slice(0, 4));
 
+  eleventyConfig.addCollection('education', () =>
+    [
+      ...educationData.data.map((education) => {
+        let duration;
+
+        if (education.start_date && education.end_date) {
+          duration = formatDistance(new Date(education.end_date), new Date(education.start_date));
+          duration = `${duration} (from ${format(new Date(education.start_date), 'MMM yyyy')})`;
+        } else if (education.start_date) {
+          duration = `since ${format(new Date(education.start_date), 'MMM yyyy')}`;
+        }
+
+        return { ...education, duration };
+      }),
+    ].reverse()
+  );
+
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy('src/static');
+
+  eleventyConfig.addLiquidFilter("date", (date, dateFormat) => {
+    return format(new Date(date), dateFormat);
+  });
 
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addTransform('compressHTML', function (content, outputPath) {
