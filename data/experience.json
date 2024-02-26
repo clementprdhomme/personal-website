@@ -72,6 +72,21 @@
       "url": "https://www.facebook.com/CykelaktionSthlm/",
       "intro": "Help with safety during critical mass cycling events",
       "long_intro": "Cykelaktion Stockholm is an activist group that runs monthly critical mass cycling events and contributes to the yearly Cykelkarnevalen (cycling carnival). As a volunteer, I've helped make signs and other flags, as well as ensure safety during the critical mass cycling events."
+    },
+    {
+      "id": 4,
+      "company": "Leksaksbiblioteket Stockholm",
+      "side_activity": true,
+      "positions": [
+        {
+          "title": "Volunteer",
+          "start_date": "2024-02-17T00:00:00+00:00",
+          "end_date": null
+        }
+      ],
+      "url": "https://www.leksaksbiblioteket-sthlm.se/",
+      "intro": "Help with daily tasks such as welcoming people and registering loans",
+      "long_intro": "Leksaksbiblioteket is Stockholm's first toy library. I joined as a volunteer to help with daily tasks such as welcoming people and registering loans for a few hours a week."
     }
   ]
 }

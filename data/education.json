@@ -12,7 +12,7 @@
       "intro": "Ensimag (Grenoble Institude of Technology) is a French Grande École which covers Computer Science and applied mathematics. There I specialised in Information Systems Engineering."
     },
     {
-      "id": 0,
+      "id": 1,
       "school": "Facultad de Informática",
       "location": "Madrid, Spain",
       "degree": null,
@@ -21,6 +21,16 @@
       "end_date": "2014-06-30T00:00:00+00:00",
       "url": "http://fi.upm.es/",
       "intro": "I studied at Facultad de Informática (Polytechnic University of Madrid) as part of an Erasmus university exchange."
+    },
+    {
+      "id": 2,
+      "school": "Jensen Education",
+      "location": "Stockholm, Sweden",
+      "degree": "Svenska som andraspråk grundläggande 2",
+      "start_date": "2023-09-11T00:00:00+00:00",
+      "end_date": null,
+      "url": "https://www.jensenkomvux.se/",
+      "intro": "I'm currently studying Swedish 9h a week at Jensen Education with the course Svenska som andraspråk grundläggande."
     }
   ]
 }

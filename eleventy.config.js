@@ -40,6 +40,41 @@ module.exports = (eleventyConfig) => {
     ].reverse()
   );
 
+  eleventyConfig.addCollection('work_experience', () =>
+    [
+      ...experienceData.data
+        .filter((experience) => !experience.side_activity)
+        .map((experience) => {
+          let duration;
+
+          const startDate = experience.positions.length > 0
+            ? experience.positions[0].start_date
+            : null;
+
+          const endDate = experience.positions.length > 0
+            ? experience.positions[experience.positions.length - 1].end_date
+            : null;
+
+          if (startDate && endDate) {
+            duration = formatDistance(new Date(endDate), new Date(startDate));
+            duration = `${duration} (from ${format(new Date(startDate), 'MMM yyyy')})`;
+          } else if (startDate) {
+            duration = `since ${format(new Date(startDate), 'MMM yyyy')}`;
+          }
+
+          const positions = [...experience.positions].reverse().map((position) => ({
+            ...position,
+            formatted_start_date: format(new Date(position.start_date), 'yyyy-MM'),
+            formatted_end_date: position.end_date
+              ? format(new Date(position.end_date), 'yyyy-MM')
+              : null,
+          }));
+
+          return { ...experience, positions, duration, start_date: startDate, end_date: endDate };
+        }),
+    ].reverse()
+  );
+
   eleventyConfig.addCollection('projects', () => [...projectsData.data].reverse().slice(0, 4));
 
   eleventyConfig.addCollection('education', () =>
