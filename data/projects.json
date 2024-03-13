@@ -76,6 +76,13 @@
       "slug": "reforestation-app",
       "intro": "Catalogue of reforestation projects ranked by transparency",
       "url": "https://reforestation.app/"
+    },
+    {
+      "id": 11,
+      "name": "HeCo Invest",
+      "slug": "heco-invest",
+      "intro": "Collaborative platform to finance projects contributing to the conservation of the Amazon Basin",
+      "url": "https://hecoinvest.org/"
     }
   ]
 }
