@@ -83,6 +83,13 @@
       "slug": "heco-invest",
       "intro": "Collaborative platform to finance projects contributing to the conservation of the Amazon Basin",
       "url": "https://hecoinvest.org/"
+    },
+    {
+      "id": 12,
+      "name": "Impact4Soil",
+      "slug": "impact4soil",
+      "intro": "Platform aggregating soil carbon data, analysis, and land management solutions",
+      "url": "https://www.impact4soil.com/"
     }
   ]
 }
