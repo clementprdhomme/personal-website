@@ -26,11 +26,11 @@
       "id": 2,
       "school": "Jensen Education",
       "location": "Stockholm, Sweden",
-      "degree": "Svenska som andraspråk grundläggande 3",
+      "degree": "Svenska som andraspråk grundläggande 4",
       "start_date": "2023-09-11T00:00:00+00:00",
-      "end_date": null,
+      "end_date": "2024-06-27T00:00:00+00:00",
       "url": "https://www.jensenkomvux.se/",
-      "intro": "I'm currently studying Swedish 9h a week at Jensen Education with the course Svenska som andraspråk grundläggande."
+      "intro": "I studied Swedish 9h a week at Jensen Education with the course Svenska som andraspråk grundläggande 2, 3 and 4."
     }
   ]
 }
