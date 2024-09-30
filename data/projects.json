@@ -90,6 +90,13 @@
       "slug": "impact4soil",
       "intro": "Platform aggregating soil carbon data, analysis, and land management solutions",
       "url": "https://www.impact4soil.com/"
+    },
+    {
+      "id": 13,
+      "name": "Natural Capital Primer",
+      "slug": "natural-capital-primer",
+      "intro": "Science-based resource that explains the concept of natural capital",
+      "url": "https://naturalcapitalprimer.com/"
     }
   ]
 }
