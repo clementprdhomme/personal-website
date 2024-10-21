@@ -97,6 +97,13 @@
       "slug": "natural-capital-primer",
       "intro": "Science-based resource that explains the concept of natural capital",
       "url": "https://naturalcapitalprimer.com/"
+    },
+    {
+      "id": 14,
+      "name": "SkyTruth 30x30",
+      "slug": "skytruth-30x30",
+      "intro": "Platform to track the 30x30 goal of protecting 30% of land and ocean by 2030",
+      "url": "https://30x30.skytruth.org/"
     }
   ]
 }
