@@ -17,22 +17,23 @@ layout: cv.html
 
   <div class="about">
     <p>
-      I'm passionate about the environment, sustainability and especially climate change.
-    </p>
-    <!--<p>
-      I've made it my purpose to do everything I can to mitigate the consequences of the
-      environmental crisis by working exclusively for companies whose purpose it is to fix the
-      planet.
-    </p>-->
-    <p>
-      At work, I've lead the development of diverse web applications that can be used by
-      decision-makers as the basis for evidence-based action. On my free time, I've regularly
-      participated in climate strikes and joined other activist groups in Stockholm.
+      With over a decade of experience, I develop React.js web applications focused on environmental
+      issues and data visualisations. In 2022, I took a leap forward and became Technical lead to
+      support teams in delivering high-quality products efficiently.
     </p>
     <p>
-      I'm an avid learner that is motivated by positive change. I'm looking for opportunities that
-      make a difference and companies that value care and empathy, and that start changing the world
-      from within.
+      I'm always eager to learn and challenge myself, whether that's through adopting new
+      technologies, taking part in engaging projects, or supporting others to grow. The
+      only constant is working on something meaningful.
+    </p>
+    <p>
+      I consider myself social, empathetic, and curious while also being responsible,
+      organised and proactive. As a team player, I like to encourage, mentor, and
+      celebrate others.
+    </p>
+    <p>
+      Outside of work, I like to give back by volunteering at various associations that align with
+      my values.
     </p>
   </div>
 
@@ -46,6 +47,12 @@ layout: cv.html
         </h3>
         <span>{{experience.duration}}</span>
         <p>{{experience.long_intro}}</p>
+        <p class="technologies">
+          <span>Technologies</span>
+          {%- for technology in experience.technologies -%}
+            <span>{{technology}}</span>
+          {%- endfor -%}
+        </p>
         {%- for position in experience.positions -%}
           <p class="position">
             <span>{{position.formatted_start_date}}</span>
@@ -103,6 +110,6 @@ layout: cv.html
     <dt>Spanish</dt>
     <dd>Full professional proficiency (C2)</dd>
     <dt>Swedish</dt>
-    <dd>Intermediate proficiency (B1)</dd>
+    <dd>Intermediate proficiency (B2)</dd>
   </dl>
 </div>

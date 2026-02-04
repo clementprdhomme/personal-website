@@ -13,7 +13,7 @@
       ],
       "url": "https://www.facebook.com/INPulsePage",
       "intro": "Promote diversity and fight homophobia as the president of my university's LGBT+ student association",
-      "long_intro": "INPulse is the LGBT+ student association of the Grenoble Institute of Technology. As president, my aim was to help new LGBT+ students meet and find their way no matter who they are. Together with my team, we've promoted diversity and published posters against homophobia."
+      "long_intro": "INPulse is the LGBT+ student association of the Grenoble Institute of Technology. As president, my aim was to help new LGBT+ students meet and find their way no matter who they are. Together with my team, we promoted diversity and published posters against homophobia."
     },
     {
       "id": 1,
@@ -27,7 +27,11 @@
       ],
       "url": "http://www.goinvo.com",
       "intro": "Built a dynamic visualisation for Invo's blog and a prototype to compare Massachusetts' hospitals",
-      "long_intro": "During this internship, I worked on rewriting the algorithms and design of a data visualisation, as well as created the prototype of a web application to visualise and compare care among hospitals in Massachusetts."
+      "long_intro": "During this internship, I worked on rewriting the algorithms and design of a data visualisation, as well as created the prototype of a web application to visualise and compare care among hospitals in Massachusetts.",
+      "technologies": [
+        "Native JS",
+        "D3.js"
+      ]
     },
     {
       "id": 2,
@@ -55,8 +59,19 @@
         }
       ],
       "url": "http://www.vizzuality.com/",
-      "intro": "Lead medium to large size projects with a focus on quality",
-      "long_intro": "I lead the development of interactive React.js web applications focused on environmental issues such as climate change and biodiversity loss. Most of them involve data visualisations and maps. I'm also the co-founder of the internal sustainability group which organises regular talks and activities during the yearly company retreat."
+      "intro": "Lead the development of high-quality Next.js (React.js) applications",
+      "long_intro": "I develop multiple highly interactive web applications each year focusing on complex charts, maps, and geospatial analysis in cross-functional teams of 5 to 10. As a Technical Lead, I oversee operational planning, execution, and team collaboration to deliver high-quality projects on time.",
+      "technologies": [
+        "TypeScript, Next.js, React.js, Tailwind CSS, shadcn/ui (Radix UI)",
+        "Authentication and headless CMS",
+        "State management",
+        "Forms and validation",
+        "Internationalisation",
+        "Charts and maps",
+        "Unit, component and E2E testing",
+        "CI/CD",
+        "Cloud services (AWS, Google Cloud, etc.)"
+      ]
     },
     {
       "id": 3,
@@ -69,9 +84,9 @@
           "end_date": null
         }
       ],
-      "url": "https://www.facebook.com/CykelaktionSthlm/",
+      "url": "https://www.cykelaktion.se/",
       "intro": "Help with safety during critical mass cycling events",
-      "long_intro": "Cykelaktion Stockholm is an activist group that runs monthly critical mass cycling events and contributes to the yearly Cykelkarnevalen (cycling carnival). As a volunteer, I've helped make signs and other flags, as well as ensure safety during the critical mass cycling events."
+      "long_intro": "Cykelaktion Stockholm is an activist group that organises monthly critical mass events and contributes to the annual Cykelkarnevalen. As a volunteer, I ensure safety during the critical mass rides and manage the children's activities booth at Cykelkarnevalen."
     },
     {
       "id": 4,
@@ -86,7 +101,7 @@
       ],
       "url": "https://www.leksaksbiblioteket-sthlm.se/",
       "intro": "Help with daily tasks such as welcoming people and registering loans",
-      "long_intro": "Leksaksbiblioteket is Stockholm's first toy library. I joined as a volunteer to help with daily tasks such as welcoming people and registering loans for a few hours a week."
+      "long_intro": "Leksaksbiblioteket is Stockholm's first toy library. I volunteer up to 5 hours each week to assist with daily operations such as welcoming visitors and registering loans."
     }
   ]
 }
