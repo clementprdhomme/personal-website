@@ -104,6 +104,13 @@
       "slug": "skytruth-30x30",
       "intro": "Platform to track the 30x30 goal of protecting 30% of land and ocean by 2030",
       "url": "https://30x30.skytruth.org/"
+    },
+    {
+      "id": 15,
+      "name": "Living Planet Data Hub",
+      "slug": "living-planet-data-hub",
+      "intro": "WWF-Canada platform to visualise and analyse data on protected areas, restoration, and ecosystem threats",
+      "url": "https://datahub.wwf.ca/"
     }
   ]
 }
