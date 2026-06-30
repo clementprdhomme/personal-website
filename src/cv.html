@@ -6,9 +6,7 @@ layout: cv.html
   <h1>Clément Prod'homme, {{collections.work_experience[0].positions[0].title}}</h1>
 
   <p>
-    <a href="https://clementprodhomme.fr" rel="noopener">
-      clementprodhomme.fr
-    </a>
+    <a href="https://clementprodhomme.fr" rel="noopener"> clementprodhomme.fr </a>
     <br />
     Stockholm, Sweden
   </p>
@@ -17,23 +15,18 @@ layout: cv.html
 
   <div class="about">
     <p>
-      With over a decade of experience, I develop React.js web applications focused on environmental
-      issues and data visualisations. In 2022, I took a leap forward and became Technical lead to
-      support teams in delivering high-quality products efficiently.
+      I'm a Technical lead with over a decade of front-end experience. I've worked professionally
+      with React.js for the past 8+ years and Typescript and Next.js for the past 5+ years. I am
+      also a web accessibility advocate and specialist.
     </p>
     <p>
-      I'm always eager to learn and challenge myself, whether that's through adopting new
-      technologies, taking part in engaging projects, or supporting others to grow. The
-      only constant is working on something meaningful.
+      In my current role, I coordinate and support a cross-functional team of 5-10 members,
+      balancing day-to-day sprint activities, planning deliverables and tracking execution. I engage
+      regularly with stakeholders and clients to understand their needs and report progress.
     </p>
     <p>
-      I consider myself social, empathetic, and curious while also being responsible,
-      organised and proactive. As a team player, I like to encourage, mentor, and
-      celebrate others.
-    </p>
-    <p>
-      Outside of work, I like to give back by volunteering at various associations that align with
-      my values.
+      I'm naturally curious and empathetic, always eager to learn and take on new challenges. I also
+      take pride in giving visibility to the work of those around me.
     </p>
   </div>
 
@@ -47,18 +40,23 @@ layout: cv.html
         </h3>
         <span>{{experience.duration}}</span>
         <p>{{experience.long_intro}}</p>
-        <p class="technologies">
-          <span>Technologies</span>
-          {%- for technology in experience.technologies -%}
-            <span>{{technology}}</span>
-          {%- endfor -%}
-        </p>
         {%- for position in experience.positions -%}
-          <p class="position">
-            <span>{{position.formatted_start_date}}</span>
-            {{position.title}}
-          </p>
+        <p class="position">
+          <span>{{position.formatted_start_date}}</span>
+          {{position.title}}
+        </p>
         {%- endfor -%}
+        {% if experience.accomplishments %}
+          <div class="accomplishments">
+            <h4>Key accomplishments</h4>
+            <ul>
+              {%- for accomplishment in experience.accomplishments -%}
+                <li>{{accomplishment}}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {% endif %}
+
       </div>
     {% endif %}
   {%- endfor -%}
@@ -66,39 +64,35 @@ layout: cv.html
   <h2>Education</h2>
 
   {%- for education in collections.education -%}
-    <div class="c-experience">
-      <h3>
-        <a class="-primary" href="{{education.url}}" rel="noopener">{{education.school}}</a>
-      </h3>
-      <span>{{education.duration}} · {{education.location}}</span>
-      <p>{{education.intro}}</p>
-      {% if education.degree %}
-        <p class="position">
-          {{education.degree}}
-        </p>
-      {% endif %}
-    </div>
+  <div class="c-experience">
+    <h3>
+      <a class="-primary" href="{{education.url}}" rel="noopener">{{education.school}}</a>
+    </h3>
+    <span>{{education.duration}} · {{education.location}}</span>
+    <p>{{education.intro}}</p>
+    {% if education.degree %}
+    <p class="position">{{education.degree}}</p>
+    {% endif %}
+  </div>
   {%- endfor -%}
 
   <h2>Other activities</h2>
 
-  {%- for experience in collections.experience -%}
-    {% if experience.side_activity == true %}
-      <div class="c-experience">
-        <h3>
-          <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
-        </h3>
-        <span>{{experience.duration}}</span>
-        <p>{{experience.long_intro}}</p>
-        {%- for position in experience.positions -%}
-          <p class="position">
-            <span>{{position.formatted_start_date}}</span>
-            {{position.title}}
-          </p>
-        {%- endfor -%}
-      </div>
-    {% endif %}
-  {%- endfor -%}
+  {%- for experience in collections.experience -%} {% if experience.side_activity == true %}
+  <div class="c-experience">
+    <h3>
+      <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
+    </h3>
+    <span>{{experience.duration}}</span>
+    <p>{{experience.long_intro}}</p>
+    {%- for position in experience.positions -%}
+    <p class="position">
+      <span>{{position.formatted_start_date}}</span>
+      {{position.title}}
+    </p>
+    {%- endfor -%}
+  </div>
+  {% endif %} {%- endfor -%}
 
   <h2>Language skills</h2>
 

@@ -67,7 +67,8 @@ body {
 body,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: Anaheim, Tahoma, sans-serif;
   font-size: 17px;
   font-weight: 500;
@@ -78,7 +79,8 @@ h3 {
   body,
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -286,18 +288,31 @@ a.-secondary:hover {
   color: var(--body-secondary-color);
 }
 
-.c-experience .technologies {
+.c-experience .accomplishments {
   margin-top: 15px;
+}
+
+.c-experience .accomplishments h4 {
+  margin: 0;
+}
+
+.c-experience .accomplishments ul {
+  margin-top: 10px;
+  padding-left: 20px;
   color: var(--body-secondary-color);
 }
 
-.c-experience .technologies span:first-of-type {
+.c-experience .accomplishments li + li {
+  margin-top: 10px;
+}
+
+.c-experience .accomplishments span:first-of-type {
   display: inline-block;
   margin-right: 15px;
   color: var(--body-primary-color);
 }
 
-.c-experience .technologies span:not(:first-of-type):not(:last-of-type)::after {
+.c-experience .accomplishments span:not(:first-of-type):not(:last-of-type)::after {
   content: '  ·  ';
 }
 
@@ -307,7 +322,7 @@ a.-secondary:hover {
 }
 
 .c-experience p:first-of-type + p.position,
-.c-experience .technologies + p.position {
+.c-experience .accomplishments + p.position {
   margin-top: 15px;
 }
 

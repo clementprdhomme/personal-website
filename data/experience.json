@@ -12,8 +12,8 @@
         }
       ],
       "url": "https://www.facebook.com/INPulsePage",
-      "intro": "Promote diversity and fight homophobia as the president of my university's LGBT+ student association",
-      "long_intro": "INPulse is the LGBT+ student association of the Grenoble Institute of Technology. As president, my aim was to help new LGBT+ students meet and find their way no matter who they are. Together with my team, we promoted diversity and published posters against homophobia."
+      "intro": "Promote diversity and organise events for new LGBT+ students",
+      "long_intro": "As president of Grenoble Institute of Technology's LGBT+ student association, my team and I published posters promoting diversity and organised events and safe spaces for new students."
     },
     {
       "id": 1,
@@ -27,11 +27,8 @@
       ],
       "url": "http://www.goinvo.com",
       "intro": "Built a dynamic visualisation for Invo's blog and a prototype to compare Massachusetts' hospitals",
-      "long_intro": "During this internship, I worked on rewriting the algorithms and design of a data visualisation, as well as created the prototype of a web application to visualise and compare care among hospitals in Massachusetts.",
-      "technologies": [
-        "Native JS",
-        "D3.js"
-      ]
+      "long_intro": "During this internship, I worked on rewriting the algorithms and design of a D3 data visualisation, as well as created the prototype of a web application to visualise and compare care among hospitals in Massachusetts.",
+      "technologies": ["Native JS", "D3", "Leaflet"]
     },
     {
       "id": 2,
@@ -40,27 +37,27 @@
         {
           "title": "Front-end intern",
           "start_date": "2015-02-16T00:00:00+00:00",
-          "end_date":  "2015-08-15T00:00:00+00:00"
+          "end_date": "2015-08-15T00:00:00+00:00"
         },
         {
           "title": "Front-end engineer",
           "start_date": "2015-08-15T00:00:00+00:00",
-          "end_date":  "2019-02-01T00:00:00+00:00"
+          "end_date": "2019-02-01T00:00:00+00:00"
         },
         {
           "title": "Senior front-end engineer",
           "start_date": "2019-02-01T00:00:00+00:00",
-          "end_date":  null
+          "end_date": null
         },
         {
           "title": "Technical lead",
           "start_date": "2022-01-14T00:00:00+00:00",
-          "end_date":  null
+          "end_date": null
         }
       ],
       "url": "http://www.vizzuality.com/",
-      "intro": "Lead the development of high-quality Next.js (React.js) applications",
-      "long_intro": "I develop multiple highly interactive web applications each year focusing on complex charts, maps, and geospatial analysis in cross-functional teams of 5 to 10. As a Technical Lead, I oversee operational planning, execution, and team collaboration to deliver high-quality projects on time.",
+      "intro": "Lead and coordinate the development of high-quality Next.js (React.js) applications",
+      "long_intro": "I've worked at Vizzuality as a front-end developer for 8 years before transitioning to Technical lead in 2022. Every year I've contributed to the development of multiple climate-focused platforms featuring complex data visualisations and geospatial analysis using Mapbox GL JS, deck.gl, D3 and visx. ",
       "technologies": [
         "TypeScript, Next.js, React.js, Tailwind CSS, shadcn/ui (Radix UI)",
         "Authentication and headless CMS",
@@ -71,11 +68,18 @@
         "Unit, component and E2E testing",
         "CI/CD",
         "Cloud services (AWS, Google Cloud, etc.)"
+      ],
+      "accomplishments": [
+        "Led the engineering of two multi-year projects for the World Bank and an EU-funded consortium",
+        "Introduced per-branch database deployment and E2E accessibility testing pipelines to strengthen quality control across platforms",
+        "Sourced and negotiated a third-party vendor deal to automate internationalisation workflows",
+        "Delivered technical documentation, training videos and full-day workshops for clients including Mongabay and South Sudan's Ministry of Water Resources and Irrigation",
+        "Led recruitment, onboarding and mentoring of 3 junior developers"
       ]
     },
     {
       "id": 3,
-      "company": "Cykelaktion Stockholm",
+      "company": "Cykelfrämjandet & Cykelaktion Stockholm",
       "side_activity": true,
       "positions": [
         {
@@ -84,9 +88,9 @@
           "end_date": null
         }
       ],
-      "url": "https://www.cykelaktion.se/",
-      "intro": "Help with safety during critical mass cycling events",
-      "long_intro": "Cykelaktion Stockholm is an activist group that organises monthly critical mass events and contributes to the annual Cykelkarnevalen. As a volunteer, I ensure safety during the critical mass rides and manage the children's activities booth at Cykelkarnevalen."
+      "url": "https://cykelframjandet.se/",
+      "intro": "Contribute to monthly and yearly events about cycling",
+      "long_intro": "I regularly volunteer at monthly critical mass events to ensure safety during the rides and the annual Cykelkarnevalen where I manage the children's activities booth."
     },
     {
       "id": 4,
@@ -100,8 +104,8 @@
         }
       ],
       "url": "https://www.leksaksbiblioteket-sthlm.se/",
-      "intro": "Help with daily tasks such as welcoming people and registering loans",
-      "long_intro": "Leksaksbiblioteket is Stockholm's first toy library. I volunteer up to 5 hours each week to assist with daily operations such as welcoming visitors and registering loans."
+      "intro": "In charge of attending people and registering their loans",
+      "long_intro": "I volunteer up to 5 hours a week at Leksaksbiblioteket, Stockholm's first toy library, to assist with daily operations such as welcoming visitors and registering loans."
     }
   ]
 }
