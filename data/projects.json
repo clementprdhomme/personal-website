@@ -111,6 +111,13 @@
       "slug": "living-planet-data-hub",
       "intro": "WWF-Canada platform to visualise and analyse data on protected areas, restoration and ecosystem threats",
       "url": "https://datahub.wwf.ca/"
+    },
+    {
+      "id": 16,
+      "name": "Forest Innovation Platform",
+      "slug": "forest-innovation-platform",
+      "intro": "Forestry data and climate projections to understand the risks facing forests in the continental U.S.",
+      "url": "https://forestinnovationplatform.org/"
     }
   ]
 }
