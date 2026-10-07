@@ -3,31 +3,62 @@ layout: cv.html
 ---
 
 <div class="l-cv">
-  <h1>Clément Prod'homme, {{collections.work_experience[0].positions[0].title}}</h1>
+  <h1>Clément Prod'homme</h1>
+  <span>Stockholm, Sweden</span>
 
-  <p>
-    <a href="https://clementprodhomme.fr" rel="noopener"> clementprodhomme.fr </a>
-    <br />
-    Stockholm, Sweden
+  <p class="contact">
+    <a href="https://clementprodhomme.fr" rel="noopener">clementprodhomme.fr</a> ·
+    <a href="mailto:contact@clementprodhomme.fr">contact@clementprodhomme.fr</a> ·
+    <a href="https://github.com/clementprdhomme" rel="noopener">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/clément-prod-homme-158a815b" rel="noopener">LinkedIn</a>
   </p>
 
   <h2>About me</h2>
 
   <div class="about">
     <p>
-      I'm a Technical lead with over a decade of front-end experience. I've worked professionally
-      with React.js for the past 8+ years and Typescript and Next.js for the past 5+ years. I am
-      also a web accessibility advocate and specialist.
+      I'm a hands-on Technical lead with over a decade of experience building data-heavy web
+      applications with React, Next.js and TypeScript for international organisations. I am also a
+      web accessibility advocate and specialist.
     </p>
     <p>
-      In my current role, I coordinate and support a cross-functional team of 5-10 members,
-      balancing day-to-day sprint activities, planning deliverables and tracking execution. I engage
-      regularly with stakeholders and clients to understand their needs and report progress.
+      In my current role, I lead and coordinate a cross-functional team of 5-10 people, organise our
+      sprint ceremonies, plan milestones and write code, often with AI-assisted development tools.
     </p>
     <p>
       I'm naturally curious and empathetic, always eager to learn and take on new challenges. I also
       take pride in giving visibility to the work of those around me.
     </p>
+  </div>
+
+  <h2>Skills</h2>
+
+  <div class="c-experience -dense">
+    <h3>Front-end</h3>
+    <p>
+      React (9+ years) · Next.js (8+ years) · TypeScript (8+ years) · TanStack Query · Tailwind CSS
+      · shadcn/ui (Radix UI)
+    </p>
+  </div>
+
+  <div class="c-experience -dense">
+    <h3>Back-end</h3>
+    <p>Node.js · REST APIs · Headless CMS (Payload, Strapi) · PostgreSQL · Authentication · RBAC</p>
+  </div>
+
+  <div class="c-experience -dense">
+    <h3>Data visualisation & maps</h3>
+    <p>Mapbox GL JS · MapLibre GL JS · deck.gl · D3</p>
+  </div>
+
+  <div class="c-experience -dense">
+    <h3>Quality & delivery</h3>
+    <p>Playwright · Vitest · Axe-core · OWASP · Docker · GitHub Actions · Claude Code</p>
+  </div>
+
+  <div class="c-experience -dense">
+    <h3>Leadership</h3>
+    <p>Agile (Scrum) · Mentoring · Hiring · Client workshops</p>
   </div>
 
   <h2>Work experience</h2>
@@ -44,7 +75,15 @@ layout: cv.html
       <span>{{position.formatted_start_date}}</span>
       {{position.title}}
     </p>
-    {%- endfor -%} {% if experience.accomplishments %}
+    {% if position.platforms.size > 0 %}
+    <p class="platforms">
+      Launched {%- for platform in position.platforms %} {%- if forloop.first %} {% elsif
+      forloop.last and position.other_platforms_count == 0 %} and {% else %}, {% endif -%}
+      <a href="{{platform.url}}" rel="noopener">{{platform.name}}</a>
+      {%- endfor -%} {%- if position.other_platforms_count > 0 %} and
+      {{position.other_platforms_count}}&nbsp;more{% endif %}
+    </p>
+    {% endif %} {%- endfor -%} {% if experience.accomplishments %}
     <div class="accomplishments">
       <h4>Key accomplishments</h4>
       <ul>
@@ -64,42 +103,32 @@ layout: cv.html
     <h3>
       <a class="-primary" href="{{education.url}}" rel="noopener">{{education.school}}</a>
     </h3>
-    <span>{{education.duration}} · {{education.location}}</span>
+    <span
+      >{% if education.compact and education.inline_intro %}{{education.inline_intro}} · {% endif
+      %}{{education.duration}} · {{education.location}}</span
+    >
+    {% unless education.compact %}
     <p>{{education.intro}}</p>
-    {% if education.degree %}
+    {% endunless %} {% if education.degree %}
     <p class="position">{{education.degree}}</p>
     {% endif %}
   </div>
   {%- endfor -%}
 
-  <h2>Other activities</h2>
+  <h2>Languages & activities</h2>
+
+  <div class="c-experience">
+    <h3>Languages</h3>
+    <p>French (native) · English (C2) · Spanish (C2) · Swedish (B2/C1)</p>
+  </div>
 
   {%- for experience in collections.experience -%} {% if experience.side_activity == true %}
   <div class="c-experience">
     <h3>
       <a class="-primary" href="{{experience.url}}" rel="noopener">{{experience.company}}</a>
     </h3>
-    <span>{{experience.duration}}</span>
-    <p>{{experience.long_intro}}</p>
-    {%- for position in experience.positions -%}
-    <p class="position">
-      <span>{{position.formatted_start_date}}</span>
-      {{position.title}}
-    </p>
-    {%- endfor -%}
+    <span>{{experience.positions.first.title}} · {{experience.duration}}</span>
+    <p>{{experience.intro}}</p>
   </div>
   {% endif %} {%- endfor -%}
-
-  <h2>Language skills</h2>
-
-  <dl>
-    <dt>French</dt>
-    <dd>Native speaker</dd>
-    <dt>English</dt>
-    <dd>Full professional proficiency (C2)</dd>
-    <dt>Spanish</dt>
-    <dd>Full professional proficiency (C2)</dd>
-    <dt>Swedish</dt>
-    <dd>Intermediate proficiency (B2/C1)</dd>
-  </dl>
 </div>
